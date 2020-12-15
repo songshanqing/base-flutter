@@ -35,14 +35,14 @@ class _TabsState  extends State<Tabs>{
         unselectedFontSize: 16,//未选中字体大小
         items:<BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon:Image.asset("images/home.png",width:22),
-              activeIcon:Image.asset("images/home_active.png",width:22),
+              icon:Image.asset("images/tabs/home.png",width:22),
+              activeIcon:Image.asset("images/tabs/home_active.png",width:22),
               // ignore: deprecated_member_use
               title:Text('首页')
           ),
           BottomNavigationBarItem(
-              icon:Image.asset("images/test.png",width:22),
-              activeIcon:Image.asset("images/test_active.png",width:22),
+              icon:Image.asset("images/tabs/test.png",width:22),
+              activeIcon:Image.asset("images/tabs/test_active.png",width:22),
               // ignore: deprecated_member_use
               title:Text('测试')
           )

@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   english_words: ^3.1.3
   dio: ^3.0.10
+  provider: ^4.3.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -48,11 +49,13 @@ flutter: #flutter相关的配置选项
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - images/home.png
-     - images/home_active.png
-     - images/test.png
-     - images/test_active.png
-     - images/head_sculpture.jpg
+     - images/tabs/home.png
+     - images/tabs/home_active.png
+     - images/tabs/test.png
+     - images/tabs/test_active.png
+     - images/drawer/head_sculpture.jpg
+     - images/login/password.png
+     - images/login/user.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

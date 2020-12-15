@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../pages/Tabs/Tabs.dart';
-import '../pages/Login/Login.dart';
+import 'package:flutter_app/pages/Tabs/Tabs.dart';
+import 'package:flutter_app/pages/Login/Login.dart';
+
 // 定义路由
 final  routeTable = {
   '/' : (context) => Tabs(),//不用传参的写法

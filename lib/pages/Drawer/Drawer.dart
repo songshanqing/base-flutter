@@ -47,7 +47,7 @@ class MyDrawer extends StatelessWidget{
          Padding(
            padding:const EdgeInsets.symmetric(horizontal: 16.0),//用于设置对称方向的填充，vertical指top和bottom，horizontal指left和right。
            child:ClipOval(//如果 child 为正方形时剪裁之后是圆形，如果 child 为矩形时，剪裁之后为椭圆形
-               child:Image.asset("images/head_sculpture.jpg",width:70)
+               child:Image.asset("images/drawer/head_sculpture.jpg",width:70)
            ),
          ),
          Text("用户名",
