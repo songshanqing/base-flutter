@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/service/request.dart';
 
@@ -9,16 +8,15 @@ class HomePage extends StatefulWidget{//有状态的组件
 class _HomePageState extends State<HomePage>{
   void getHttp() async {
     try {
-      // Response response = await Dio().post("http://report.secton.cn/personObservationReport/list",data:{"pageNumber":1,"rowNumber":5});
-      // Response response = await Dio().get("https://www.baidu.com");
-      // print(response);
-      var data={"pageNumber":1,"rowNumber":5};
-      Response response=await request("/personObservationReport/list",data,Options(method: "GET"),);
-      print(response);
-      // // print(response.statusCode);
-      // print(response.data);
+      const params={"pageNumber":1,"rowNumber":5};
+      final response=await http.post("/personObservationReport/list",params:params);
+      // print("response:.$response");
+      print(response.data);
+      print(response.headers);
+      print(response.request);
+      print(response.statusCode);
     } catch (e) {
-      // print(e);
+      print("e:$e");
     }
   }
   @override

@@ -10,6 +10,9 @@ class _TestPageState extends State<TestPage>{
       appBar:AppBar(
         title:Text('我的')
       ),
+      body:Center(
+        child:Text('测试页面')
+      )
     );
   }
 }
