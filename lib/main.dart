@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';//导入包  此行代码作用是导入了Material UI组件库
 import 'package:flutter_app/router/Routes.dart';
-
+import 'package:provider/provider.dart';
+import 'package:flutter_app/states/Test/TestProvider.dart';
 /*
  应用程序的入口。main函数中调用了runApp 方法，
  它的功能是启动Flutter应用。runApp它接受一个Widget参数
@@ -15,18 +16,28 @@ class MyApp extends StatelessWidget {
   * */
   Widget build(BuildContext context) {
     /*
-    *MaterialApp 是Material库中提供的Flutter APP框架，
-    * 通过它可以设置应用的名称、主题、语言、首页及路由列表等。MaterialApp也是一个widget
-    * */
-    return new MaterialApp(
-      title: 'Flutter Demo',//应用的名称
-      theme: new ThemeData(
-        primaryColor:Color(0xFF5BCD35)//主题
-      ),
-      initialRoute: '/',//初始路由
-      onGenerateRoute:onGenerateRoute,
-      debugShowCheckedModeBanner:false,//去除右上角的debug标签
-    );
+      这里用到了MultiProvider，针对多个Provider的使用场景
+      在这里我们初始化了UserProvider并且指定了child为MaterialApp
+     */
+    return MultiProvider(
+        providers:[
+          ChangeNotifierProvider(create: (_)=>TestProvider()),
+        ],
+        /*
+          *MaterialApp 是Material库中提供的Flutter APP框架，
+          * 通过它可以设置应用的名称、主题、语言、首页及路由列表等。MaterialApp也是一个widget
+        */
+      child:new MaterialApp(
+        title: 'Flutter Demo',//应用的名称
+        theme: new ThemeData(
+            primaryColor:Color(0xFF5BCD35)//主题
+        ),
+        initialRoute: '/',//初始路由
+        onGenerateRoute:onGenerateRoute,
+        debugShowCheckedModeBanner:false,//去除右上角的debug标签
+      )
+      );
+
   }
 }
 

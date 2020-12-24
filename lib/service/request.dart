@@ -8,8 +8,8 @@ class http{
 
   static BaseOptions options=BaseOptions(
       baseUrl:'http://report.secton.cn',
-      connectTimeout:300000,//连接服务器超时时间，单位是毫秒
-      receiveTimeout:300000,//接收数据的最长时限
+      connectTimeout:5000,//连接服务器超时时间，单位是毫秒
+      receiveTimeout:5000,//接收数据的最长时限
       /*
         请求的Content-Type，默认值是"application/json; charset=utf-8".
         如果您想以"application/x-www-form-urlencoded"格式编码请求数据,
@@ -71,25 +71,25 @@ class http{
   }
 
 
-  //post封装
-  static post(path,{params}) async{
-    if(params!=null){//传了参数
-      return await request(path,data:params,options: Options(method: "POST"));
-    }else{//没有传参
-      return await request(path,options: Options(method: "POST"));
-    }
-
-  }
-
-  //get封装
-  static get(path,{params}) async{
-    if(params!=null){//传了参数
-      return await request(path,params:params,options: Options(method: "GET"));
-    }else{//没有传参
-      return await request(path,options: Options(method: "GET"));
-    }
-
-  }
+  // //post封装
+  // static post(path,{params}) async{
+  //   if(params!=null){//传了参数
+  //     return await request(path,data:params,options: Options(method: "POST"));
+  //   }else{//没有传参
+  //     return await request(path,options: Options(method: "POST"));
+  //   }
+  //
+  // }
+  //
+  // //get封装
+  // static get(path,{params}) async{
+  //   if(params!=null){//传了参数
+  //     return await request(path,params:params,options: Options(method: "GET"));
+  //   }else{//没有传参
+  //     return await request(path,options: Options(method: "GET"));
+  //   }
+  //
+  // }
 
 }
 

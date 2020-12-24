@@ -46,18 +46,18 @@ class _TabsState  extends State<Tabs>{
         onTap:_onItemTapped,//点击
         fixedColor: Color(0xFF5BCD35),//选中文字颜色
         unselectedItemColor:Color(0xFF626A7D),//未选择文字颜色
-        selectedFontSize:16,//选中字体大小
-        unselectedFontSize: 16,//未选中字体大小
+        selectedFontSize:14,//选中字体大小
+        unselectedFontSize: 14,//未选中字体大小
         items:<BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon:Image.asset("images/tabs/home.png",width:22),
-              activeIcon:Image.asset("images/tabs/home_active.png",width:22),
+              icon:Image.asset("images/tabs/home.png",width:17),
+              activeIcon:Image.asset("images/tabs/home_active.png",width:17),
               // ignore: deprecated_member_use
               title:Text('首页')
           ),
           BottomNavigationBarItem(
-              icon:Image.asset("images/tabs/test.png",width:22),
-              activeIcon:Image.asset("images/tabs/test_active.png",width:22),
+              icon:Image.asset("images/tabs/test.png",width:17),
+              activeIcon:Image.asset("images/tabs/test_active.png",width:17),
               // ignore: deprecated_member_use
               title:Text('测试')
           )

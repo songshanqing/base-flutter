@@ -1,24 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/service/request.dart';
 
 class HomePage extends StatefulWidget{//有状态的组件
   @override
   _HomePageState createState()=>_HomePageState();
 }
 class _HomePageState extends State<HomePage>{
-  void getHttp() async {
-    try {
-      const params={"pageNumber":1,"rowNumber":5};
-      final response=await http.post("/personObservationReport/list",params:params);
-      // print("response:.$response");
-      print(response.data);
-      print(response.headers);
-      print(response.request);
-      print(response.statusCode);
-    } catch (e) {
-      print("e:$e");
-    }
-  }
   @override
   Widget build(BuildContext context){
     /*
@@ -28,14 +14,6 @@ class _HomePageState extends State<HomePage>{
     return Scaffold(
       appBar:AppBar(//导航栏
           title:Text('首页')//导航栏标题
-      ),
-      body:RaisedButton(
-        child: Text("normal"),
-        onPressed: () {
-          // this.getHttp();
-          // Navigator.pushNamed(context, '/login');
-          this.getHttp();
-        },
       )
     );
   }
